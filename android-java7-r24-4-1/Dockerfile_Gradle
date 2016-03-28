@@ -5,6 +5,7 @@ MAINTAINER Cheng Yifan "cyf607@gmail.com"
 ENV GRADLE_VERSION 2.10
 
 WORKDIR /usr/bin
+RUN apt-get install unzip
 RUN curl -sLO https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip && \
   unzip gradle-${GRADLE_VERSION}-all.zip && \
   ln -s gradle-${GRADLE_VERSION} gradle && \
